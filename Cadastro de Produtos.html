@@ -2,22 +2,19 @@
 <html>
 
 <head>
+    <meta charset="utf-8" />
     <title>Estoque - Cadastro de produtos</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="stilo.css">
-    <!--começandos-->
-    <title>Upload de imagens com PHP</title>
-    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/signin.css">
+
 
 </head>
 
 <body onload="carregarTotalEstoque('totalEstoque')">
-
 
     <!--Carrinho de compras-->
     <div class="carrinho">
@@ -25,33 +22,22 @@
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Itens no estoque: <span id="totalEstoque">0</span></p><br>
     </div>
 
+    <br>
+    <div class="container">
 
-
-    <br><br>
-    <div class="container-lg" 100% wide until large breakpoint>
-
-        <form>
-            <table width="60%" border=5 bgcolor=lightblue>
+        <form method="POST" action="">
+            <table class="table" bgcolor=lightblue>
                 <form method="get" action="envio_dados.php">
-                    <td class="alinharRotulos"><b>  <input type="text" name="nome" placeholder="digite o nome do produto aqui">
-                <td class="alinharRotulos"><b>  <input type="code" name="code" placeholder="Digite o código do produto aqui">
-                <td class="alinharRotulos"><b>  <input type="date" name="date" placeholder="Digite a data do cadastro do  produto aqui">
-                <td class="alinharRotulos"><b> <input type="submit" name="enviar" value="Enviar">    
+                    <td class="alinharRotulos"><b>  <input type="text" name="nome" placeholder=" nome do produto" class="form-control">
+                <td class="alinharRotulos"><b>  <input type="code" name="code" placeholder="código do produto" class="form-control">
+                <td class="alinharRotulos"><b>  <input type="date" name="date" class="form-control"><br>
+                <td class="alinharRotulos"><b> <button type="button" class="btn btn-outline-success">Enviar</button>    
             </form>
-            <td class="alinharRotulos"><b><form action="gravar.php" method="POST" enctype="multipart/form-data">
-                    <label for="imagem">Imagem:</label>
-                    <input type="file" name="imagem"/></b></td>
-                </form>
-                <form>
-                    <td class="alinharRotulos"><b>  <textarea>Area de texto para reclamações</textarea>
-                </form>
-                <form>
-                    <input type="submit" value="Enviar avaliação">
-                </form>
+                                                           
             <tr>
-                <td class="alinharRotulos"><b>Quantidade do produto -</b></td>
+                <td class="alinharRotulos">Quantidade do produto</td>
                     <td>
-                        <select id="qtidadeProduto">
+                        <select id="qtidadeProduto" class="form-control">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -64,30 +50,31 @@
                         <option value="10">10</option>
                     </select>
                     </td>
-                    <td class="alinharRotulos"><b>  <input type="date" name="date" placeholder="data de vencimento do produto aqui">
-            </tr>
-            
-            
-
+                    
+            </tr>                       
 
             <tr>
                 <td colspan="2" align="center">
-                    <input type="button" value="Cadastrar" class="alinhaBtns" onclick="validarProduto('txtNomeProduto','txtCodProduto','qtidadeProduto')">
-                    <input type="button" value="Ver estoque" class="alinhaBtns" onclick="window.open('verEstoque.html','_self')">
-                    <input type="reset" value="Limpar" class="alinhaBtns">
+                    <input type="button" value="Cadastrar" class="form-control" class="alinhaBtns"  onclick="validarProduto('txtNomeProduto','txtCodProduto','qtidadeProduto')"><br>
+                    <input type="button" value="Ver estoque" class="form-control"class="alinhaBtns" onclick="window.open('verestoque.html','_self')"><br>
+                    <input type="reset" value="Limpar"class="form-control" class="alinhaBtns" >
                 </td>
-            </tr>
+               
         </table>
 
-    </form>
-</div> <br>
-<form>
+        <form>
+            <td class="alinharRotulos"><b>  <textarea name="" class="form-control">Area de texto para reclamações</textarea><br>
+        </form>
+        
+            <input type="submit" value="Enviar avaliação">
+    </tr>
+<br><br>
     Defina seu nível de satisfação com o app:<br>
     pouco satisfeito
     <input type="range" name="satisfacao" min="0" max="10">
     muito satisfeito
 </form>
-<form>
+</div>
 
 
       <!-- Optional JavaScript -->
