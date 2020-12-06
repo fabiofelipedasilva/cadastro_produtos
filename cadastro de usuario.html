@@ -12,49 +12,58 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/signin.css">
+    <link rel="stylesheet" href="css/css.css">
 
 </head>
 
-<body>
-    <div class="container">
-        <div class="form-signin">
-            <!--FORMULÁRIO DE CADASTRO-->
-
+<body id="fundo1">
+    <div class="card" id="telalogin1">
+        <!--FORMULÁRIO DE CADASTRO-->
+        <div class="card-body">
 
             <h2>Cadastro</h2>
-
             <p>
-                <form method="POST" action="">
-
-                    <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="Digite seu nome*" class="form-control">
+                <form class="form" method="POST" action="cadastrousu.php">
+                    <div class="form-group">
+                        <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="Digite seu nome*" class="form-control">
+                    </div>
             </p>
             <p>
-                <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="telefone*" class="form-control">
+                <div class="form-group">
+                    <input id="nome_cad" name="tel_cad" required="required" type="text" placeholder="telefone*" class="form-control">
+                </div>
             </p>
             <p>
-                <input id="email_cad" name="email_cad" required="required" type="email" placeholder="E-mail" class="form-control">
+                <div class="form-group">
+                    <input id="email_cad" name="email_cad" required="required" type="email" placeholder="E-mail*" class="form-control">
+                </div>
             </p>
             <p>
-                <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="Senha" class="form-control">
+                <div class="form-group">
+                    <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="Senha*" class="form-control">
+                </div>
             </p>
             <p>
-                <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="Confirme sua senha" class="form-control"><br>
+                <div class="form-group">
+                    <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="Confirme sua senha*" class="form-control">
+                </div>
                 <span>Receber nossas novidades?</span>
                 <div class="field radiobox"> <input type="radio" name="novidades" id="sim" value="sim" checked><label for="sim">Sim</label>
                     <input type="radio" name="novidades" id="nao" value="nao"><label for="nao">Não</label>
                 </div>
             </p>
-            <p>
-                <button type="button" class="btn btn-outline-secondary">Cadastrar</button>
-            </p>
+
+            <button type="submit" class="btn btn-outline-secondary">Cadastrar</button>
+
+
             <p class="link">
-                Já tem conta?
+                Já tem conta?&nbsp;&nbsp;
                 <a href="tela de login.html"> Ir para Login </a>
+
             </p>
             </form>
         </div>
     </div>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -1,0 +1,34 @@
+#telalogin {
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 5px 30px rgb(206, 180, 247);
+}
+
+#telalogin1 {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 5px 30px rgb(206, 180, 247);
+}
+
+#fundo {
+    background-color: rgb(243, 243, 300);
+    background-image: url(../img/imagem\ etec.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#fundo1 {
+    background-color: rgb(243, 243, 300);
+    background-image: url(../img/fundoetec.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

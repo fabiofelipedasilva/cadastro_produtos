@@ -11,18 +11,16 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/signin.css">
 
-
 </head>
 
 <body onload="carregarTotalEstoque('totalEstoque')">
 
     <!--Carrinho de compras-->
     <div class="carrinho">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/carrinho.png"><br>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Itens no estoque: <span id="totalEstoque">0</span></p><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/carrinho.png">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Itens no estoque: <span id="totalEstoque">0</span></p>
     </div>
 
-    <br>
     <div class="container">
 
         <form method="POST" action="">
@@ -31,13 +29,14 @@
                     <td class="alinharRotulos"><b>  <input type="text" name="nome" placeholder=" nome do produto" class="form-control">
                     <td class="alinharRotulos"><b>  <input type="code" name="code" placeholder="código do produto" class="form-control">
                     <td class="alinharRotulos"><b>  <input type="date" name="date" class="form-control"><br>
-                    <td class="alinharRotulos"><b> <button type="button" class="btn btn-outline-success">Enviar</button>    
+                        
                 </form>
                                                             
                 <tr>
-                    <td class="alinharRotulos">Quantidade do produto</td>
-                        <td>
-                            <select id="qtidadeProduto" class="form-control">
+                    <td class="alinharRotulos"><b>Quantidade do produto</b></td>
+                    <td>
+                        <select id="qtidadeProduto" class="form-control">
+                            <option value="0">0</option>   
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -49,41 +48,39 @@
                             <option value="9">9</option>
                             <option value="10">10</option>
                         </select>
+                    </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="button" value="Cadastrar" class="form-control" class="alinhaBtns" onclick="validarProduto('txtNomeProduto','txtCodProduto','qtidadeProduto')"><br>
+                            <input type="button" value="Ver estoque" class="form-control" class="alinhaBtns" onclick="window.open('verestoque.html','_self')"><br>
+                            <input type="reset" value="Limpar" class="form-control" class="alinhaBtns">
+                            <td class="alinharRotulos"><b> <button type="button" class="btn btn-secondary btn-lg btn-block">Enviar</button>
                         </td>
                         
-                </tr>                       
 
-                <tr>
-                    <td colspan="2" align="center">
-                        <input type="button" value="Cadastrar" class="form-control" class="alinhaBtns"  onclick="validarProduto('txtNomeProduto','txtCodProduto','qtidadeProduto')"><br>
-                        <input type="button" value="Ver estoque" class="form-control"class="alinhaBtns" onclick="window.open('verestoque.html','_self')"><br>
-                        <input type="reset" value="Limpar"class="form-control" class="alinhaBtns" >
-                    </td>
-                
             </table>
 
             <form>
-                <td class="alinharRotulos"><b>  <textarea name="" class="form-control">Area de texto para reclamações</textarea><br>
+                <td class="alinharRotulos"><b>  <textarea name="" class="form-control" placeholder="Área para reclamações"></textarea><br>
             </form>
             
-                <input type="submit" value="Enviar avaliação">
+            <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Enviar Avaliação</a>
         </tr>
     <br><br>
-        Defina seu nível de satisfação com o app:<br>
+        Defina seu nível de satisfação com o site:<br>
         pouco satisfeito
         <input type="range" name="satisfacao" min="0" max="10">
         muito satisfeito
     </form>
     </div>
 
-
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script><br><br><br><br><br><br><br><br>
-
     
     </body>
-
     </html>
